@@ -1,0 +1,489 @@
+---
+layout: workshop
+root: .
+eventtitle: "Carpentries Bootcamp: Python, Unix Shell, & Git" # enter name of the event here
+venue: "UC San Diego"      # brief name of host site without address (e.g., "Euphoric State University")
+address: "Event Room (G1E), Geisel Library, 9500 Gilman Drive, La Jolla, CA"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "null"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
+humandate: "October 3 - 6, 2022"  # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "9:00am - 12:00pm PT"  # human-readable time (e.g., "9:00 am - 4:30 pm")
+startdate: "2022-10-03"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2022-10-06"  # use YYYY-MM-DD format like" 2015-01-02"
+days: null
+instructor: ["Wout Bittremieux", "Kimberly Thomas"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Kimberly Thomas", "Eastern Kang", "Reid Otsuji"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "kkt008@ucsd.edu or rotsuji@ucsd.edu"    # contact email address for workshop organizer, such as "grace@hopper.org"
+<!-- etherpad: "" # optional (insert the URL for your Etherpad if you're using one) -->
+---
+<!--
+  HEADER (above)
+
+  Edit the values in the block above to be appropriate for your workshop.
+  If the value is not 'true', 'false', 'null', or a number, please use
+  double quotation marks around the value, unless specified otherwise.
+  And run 'tools/check' *before* committing to make sure that changes are good.
+-->
+
+<!--
+  EVENTBRITE
+
+  This block includes the Eventbrite registration widget if
+  'eventbrite' has been set in the header.  You can delete it if you
+  are not using Eventbrite, or leave it in, since it will not be
+  displayed if the 'eventbrite' field in the header is not set.
+-->
+<!--
+  INTRODUCTION
+
+  Edit the general explanatory paragraph below if you want to change
+  the pitch.
+-->
+<hr/>
+<p>
+  <a href="{{site.swc_site}}">Software Carpentry</a>
+  aims to help researchers get their work done
+  in less time and with less pain
+  by teaching them basic research computing skills.
+  This hands-on workshop will cover basic concepts and tools used with the Python programming language and version control with Git.
+  Participants will be encouraged to help one another
+  and to apply what they have learned to their own research problems.
+</p>
+
+<p>
+  <em>
+    For more information on what we teach and why,
+    please see our paper
+    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+  </em>
+</p>
+
+</hr>
+<!--
+  AUDIENCE
+
+  Explain who your audience is.  (In particular, tell readers if the
+  workshop is only open to people from a particular institution.
+-->
+<p id="who">
+  <strong>Who:</strong>
+  This workshop is open to UCSD students, staff, and faculty.
+</p>
+<p>
+  <strong>You don't need to have any previous knowledge of programming or the tools presented in the workshop to attend.  A laptop is required for each session.</strong>
+</p>
+
+<!--
+  LOCATION
+
+  This block displays the address and links to maps showing directions
+  if the latitude and longitude of the workshop have been set.  You
+  can use http://itouchmap.com/latlong.html to find the lat/long of an
+  address.
+-->
+{% if page.latlng %}
+<p id="where">
+  <strong>Where:</strong>
+  {{page.address}}.
+</p>
+{% endif %}
+
+<!--
+  SPECIAL REQUIREMENTS
+
+  Modify the block below if there are any special requirements.
+-->
+<p id="requirements">
+  <strong>Requirements:</strong> Participants must bring a laptop with
+  a few specific software packages installed (listed
+  <a href="#setup">below</a>).
+</p>
+
+<!--
+  CONTACT EMAIL ADDRESS
+
+  Display the contact email address set in the header.  If an address
+  isn't set in the header, the Software Carpentry admin address is
+  used.
+-->
+<p id="contact">
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
+</p>
+
+<p id="certificate">
+<strong>Assessment</strong>:
+A Co-Curricular of Record activity recognition may be requested for the student who:
+</p>
+
+<ul>
+<li>Attend and participate in all sessions</li>
+<li>Pass the post-workshop quiz</li>
+</ul>
+<p>
+For more information on the UC San Diego Co-Curricular of Record (CCR), please visit the <a href="https://elt.ucsd.edu/ccr/index.html">UCSD Engaged Learning Tools Co-Curricular Record page</a>.
+</p>
+<hr/>
+
+<!-- Below is the official Carpentries Code of Conduct information -->
+
+<h2 id="code-of-conduct">Code of Conduct</h2>
+
+<p>
+Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
+</p>
+
+<p class="text-center">
+  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
+    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
+  </a>
+</p>
+
+<hr/>
+
+<!-- Below is the official Carpentries Survey links -->
+
+<h2 id="surveys">Surveys</h2>
+<p>Please be sure to complete these surveys before and after the workshop.</p>
+
+    <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+
+<hr/>
+
+<!--
+  SCHEDULE
+
+  Show the workshop's schedule.  
+-->
+<h2 id="schedule">Schedule</h2>
+<div class="row">
+  <div>   
+    <table class="table">
+     <thead><tr> <th><strong>Date</strong></th> <th><strong>Session</strong></th> <th><strong>Topics</strong></th> </tr></thead>
+     <tbody>
+      <tr><td>Oct 3rd</td><td>Introduction to Python - Session 1</td><td> Jupyter Notebook - Running/Wuitting, Variables and Assignment, Data Types/Type Conversions, Built-in Functions, and Help</td></tr>
+      <tr><td>Oct 4th</td><td>Introduction to Python - Session 2</td><td> Libraries, Writing Functions, Reading/Writing data in Dataframes, and Pandas Dataframes</td></tr>
+      <tr><td>Oct 5th</td><td>Introduction to Python - Session 3</td><td> Plotting, Lists, For Loops, Looping over Datasets, and Conditionals </td></tr>
+      <tr><td>Oct 6th</td><td>Unix Shell & Version Control w/ Git</td><td> Unix Shell: Introduction, Navigating the file system, & working with files & directories <br> Git: Introduction, Creating a Repository, Tracking Changes, and Collaborating</td></tr>
+     </tbody></table>   
+  </div>
+</div>
+</hr>
+<!--
+  ETHERPAD
+
+  At `_misc/etherpad.txt` you will find a template for the etherpad.
+
+  Display the Etherpad for the workshop.  You can set this up in
+  advance or on the first day; either way, make sure you push changes
+  to GitHub after you have its URL.  To create an Etherpad, go to
+
+      http://pad.software-carpentry.org/YYYY-MM-DD-site
+
+  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  e.g., '2015-06-10-esu'.
+-->
+<h2 id="curriculum">Curriculum</h2>
+<!-- Python specific data information begins -->
+<p id = "curriculum">
+For this workshop we will be referencing the <a href="http://swcarpentry.github.io/python-novice-gapminder/">Plotting and Programming in Python</a>, <a href="https://librarycarpentry.org/lc-shell/">The UNIX Shell</a>, and <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a> Carpentries curricula. 
+</p>
+
+<hr/>
+
+<h2 id="datasect">Data</h2>
+<!-- Python specific data information begins -->
+<p id = "data">
+We will be using the 5 year <a href="http://swcarpentry.github.io/python-novice-gapminder/files/python-novice-gapminder-data.zip">gapminder data</a>, the <a href="https://librarycarpentry.org/lc-shell/data/shell-lesson.zip">shell-lesson data</a>, and <a href="./data/inflammation-01.csv">inflammation data</a>. Please download the both data prior to start of first session.
+</p>
+
+<hr/>
+
+<h2 id="collabnotes">Collaborative Notes</h2>
+<!-- Python specific data information begins -->
+<p id = "notes">
+We will use HackMD collaborative notes for taking notes, and sharing URLs and bits of code. Please use the following link to access the collaborative notes: <a href="https://hackmd.io/@kkt008/BJSsOgrfj">https://hackmd.io/@kkt008/BJSsOgrfj</a>.
+</p>
+
+<hr/>
+<!--
+  SETUP
+
+  Delete irrelevant sections from the setup instructions.  Each
+  section is inside a 'div' without any classes to make the beginning
+  and end easier to find.
+
+  This is the other place where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+
+<h2 id="setup">Setup</h2>
+
+<p>
+  To participate in this workshop, you will need
+  access to the software described below. In addition, you will
+  need an up-to-date web browser.
+</p>
+<!-- Start of 'Python' section. -->
+<div id="python">
+  <h3>Python</h3>
+  <p>
+    We will teach Python using the <a href="https://jupyter.org/">Jupyter Notebook</a>,
+    a programming environment that runs in a web browser (Jupyter Notebook will be installed by Anaconda). For this to work you will need a reasonably
+    up-to-date browser. The current versions of the Chrome, Safari and
+    Firefox browsers are all
+    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
+    (some older browsers, including Internet Explorer version 9
+    and below, are not).
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'PythonWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'PythonMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'PythonLinux')">Linux</button>
+  </div>
+  <div id="PythonWindows" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda for Windows installer with Python 3. (If you are not sure which version to choose, you probably want the 64-bit Graphical Installer <em>Anaconda3-...-Windows-x86_64.exe</em>)</li>
+      <li>Install Python 3 by running the Anaconda Installer, using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
+    </ol>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/xxQ0mzZ8UvA">SWC Install Python on Windows</a></p>
+  </div>
+  <div id="PythonMacOS" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda Installer with Python 3 for macOS (you can either use the Graphical or the Command Line Installer).</li>
+      <li>Install Python 3 by running the Anaconda Installer using all of the defaults for installation.</li>
+    </ol>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/TcSAln46u9U">SWC Install Python on Mac</a></p>     
+  </div>
+  <div id="PythonLinux" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda Installer with Python 3 for Linux.<br>
+        (The installation requires using the shell. If you aren't
+        comfortable doing the installation yourself
+        stop here and request help at the workshop.)
+      </li>
+      <li>
+        Open a terminal window and navigate to the directory where
+        the executable is downloaded (e.g., `cd ~/Downloads`).
+      </li>
+      <li>
+        Type <pre>bash Anaconda3-</pre> and then press
+        <kbd>Tab</kbd> to autocomplete the full file name. The name of
+        file you just downloaded should appear.
+      </li>
+      <li>
+        Press <kbd>Enter</kbd>
+        (or <kbd>Return</kbd> depending on your keyboard).
+        You will follow the text-only prompts.
+        To move through the text, press <kbd>Spacebar</kbd>.
+        Type <code>yes</code> and press enter to approve the license.
+        Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+        to approve the default location
+        for the files.
+        Type <code>yes</code> and press
+        <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+        to prepend Anaconda to your <code>PATH</code>
+        (this makes the Anaconda distribution the default Python).
+      </li>
+      <li>
+        Close the terminal window.
+      </li>
+    </ol>
+  </div>
+</div>
+
+<!-- End of 'Python' section. -->
+
+<!-- Start of Unix Shell section. -->
+
+<div id="shell">
+  <h3>The Bash Shell</h3>
+  <p>
+    Bash is a commonly-used shell that gives you the power to do
+    tasks more quickly.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'ShellWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'ShellMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'ShellLinux')">Linux</button>
+  </div>
+  <div id="ShellWindows" class="tabcontent">
+    <ol>
+       <li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
+       <li>Run the installer and follow the steps below:
+          <ol>
+            <p>Git 2.27.0 Setup<p/>
+            <li>Click on "Next" four times (two times if you've previously installed Git).  You don't need to change anything in the Information, location, components, and start menu screens.</li>
+            <li><strong>From the dropdown menu select "Use the nano editor by default" and click on "Next".</strong></li>
+              <p>Adjusting your PATH environment</p>
+            <li>Ensure that "Git from the command line and also from 3rd-party software" is selected and click on "Next". (If you don't do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the "Git from the command line and also from 3rd-party software" option.)</li>
+              <p>Choosing the SSH executable</p>
+              <p>Choosing HTTPS transport backend</p>
+            <li>Ensure that "Use the native Windows Secure Channel library" is selected and click on "Next".</li>
+              <p>This should mean that people stuck behind corporate firewalls that do MITM attacks with their own root CA are still able to access remote git repos.</p>
+              <p>Configuring the line ending conversions</p>
+            <li>Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".</li>
+              <p>Configuring the terminal emulator to use with Git Bash</p>
+            <li><strong>Ensure that "Use Windows' default console window" is selected and click on "Next".</strong></li>
+              <p>Configuring extra options</p>
+            <li>Ensure that "Default (fast-forward or merge) is selected and click "Next"</li>
+            <li>Ensure that "Enable file system caching" and "Enable Git Credential Manager" are selected and click on "Next".</li>
+              <p>Configuring experimental options</p>
+            <li>Click on "Install".</li>
+              <p>Installing</p>
+              <p>Completing the Git Setup Wizard</p>
+              <p>as of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next"</p>
+            <li>Click on "Finish" or "Next".</li>
+          </ol>
+      </li>
+          <li>If your "HOME" environment variable is not set (or you don't know what this is):
+            <ol>
+              <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press <kbd>Enter</kbd>)</li>
+              <li>Type the following line into the command prompt window exactly as shown:
+                <p><code>setx HOME "%USERPROFILE%"</code></p>
+              </li>
+              <li>Press <kbd>Enter</kbd>, you should see <code>SUCCESS: Specified value was saved.</code></li>
+              <li>Quit command prompt by typing <code>exit</code> then pressing <kbd>Enter</kbd></li>
+            </ol>
+	  </li>
+        </ol>
+        <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+        <p><strong>Video Tutorial:</strong> <a href="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0">Windows Installation</a></p>     
+  </div>
+  <div id="ShellMacOS" class="tabcontent">
+    <p>The default shell in some versions of macOS is Bash, and Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <code>/Applications/Utilities</code>). See the Git installation <a href="#shell-macos-video-tutorial">video tutorial</a> for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
+        <p>
+            To see if your default shell is Bash type <code>echo $SHELL</code>
+            in Terminal and press the <kbd>Return</kbd> key. If the message
+            printed does not end with '/bash' then your default is something
+            else and you can run Bash by typing <code>bash</code>
+        </p>
+        <p>
+          If you want to change your default shell, see <a href="https://support.apple.com/en-au/HT208050" rel="noopener">
+          this Apple Support article</a> and follow the instructions on "How to change your default shell".
+        </p><strong>Video Tutorial</strong>
+        <a href="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0">MacOS Installation</a>
+   </div>
+   <div id="ShellLinux" class="tabcontent">
+      <p>
+        The default shell is usually Bash and there is usually no need to
+        install anything.
+      </p>
+      <p>
+        To see if your default shell is Bash type <code>echo $SHELL</code> in
+        a terminal and press the <kbd>Enter</kbd> key. If the message printed
+        does not end with '/bash' then your default is something else and you
+        can run Bash by typing <code>bash</code>.
+      </p>
+   </div>
+</div>
+<!-- End of Unix Shell section. -->
+
+<!-- Start of Git section. -->
+<div id="git">
+  <h3>Git</h3>
+  <p>
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported
+    web browser</a>.
+  </p>
+  <p>
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+      for keeping your email address private</a> provided at GitHub.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'GitWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'GitMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'GitLinux')">Linux</button>
+  </div>
+    <div id="GitWindows" class="tabcontent">
+      <p>
+        Git should be installed on your computer as part of your Bash
+        install (see the
+        <a href="#shell">Shell installation instructions</a>).
+      </p>
+    </div>
+    <div id="GitMacOS" class="tabcontent">
+      <p>
+        <strong>For macOS</strong>, install Git for Mac
+        by downloading and running the most recent "mavericks" installer from
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
+        Because this installer is not signed by the developer, you may have to
+        right click (control click) on the .pkg file, click Open, and click
+        Open on the pop up window.
+        After installing Git, there will not be anything in your <code>/Applications</code> folder,
+        as Git is a command line program.
+        <strong>For older versions of OS X (10.5-10.8)</strong> use the
+        most recent available installer labelled "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+      </p>
+      <p><strong>Video Tutorial: </strong><a href="https://youtu.be/9LQhwETCdwY">SWC Install Shell, Git, and Nano on Mac</a></p>
+    </div>
+    <div id="GitLinux" class="tabcontent">
+      <p>
+      If Git is not already available on your machine you can try to
+      install it via your distro's package manager. For Debian/Ubuntu run
+      <code>sudo apt-get install git</code> and for Fedora run
+      <code>sudo dnf install git</code>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- End of Git section. -->
+
+
+<!-- hiding SQL Lite insrtuctions
+<div id="sql"> Start of 'SQLite' section.
+  <h3>SQLite</h3>
+  <p>
+    SQL is a specialized programming language used with databases.  We
+    use a simple database manager called
+    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="sql-windows">Windows</h4>
+      <p>
+        The <a href="{{site.swc_installer}}">Software Carpentry Windows Installer</a>
+        installs SQLite for Windows.
+        If you used the installer to configure nano, you don't need to run it again.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-macosx">Mac OS X</h4>
+      <p>
+        SQLite comes pre-installed on Mac OS X.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-linux">Linux</h4>
+      <p>
+        SQLite comes pre-installed on Linux.
+      </p>
+    </div>
+  </div>
+
+</div> End of 'SQLite' section. -->
+<!--test note-->
