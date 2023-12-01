@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
 # Values for this workshop - EDIT THIS SECTION.
 #--------------------------------------------------------------------------------
-workshop_repo   : "https://github.com/kthoma2484/2022-10-03-UCSD"
-workshop_site   : "https://kthoma2484.github.io/2022-10-03-UCSD"
+workshop_repo   : "https://github.com/kthoma2484/2023-12-18-UCSD-Python"
+workshop_site   : "https://kthoma2484.github.io/2023-12-18-UCSD-Python"
 #--------------------------------------------------------------------------------
 # Standard Software Carpentry settings - should not need to be modified.
 #--------------------------------------------------------------------------------
